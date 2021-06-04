@@ -76,7 +76,6 @@ const styles = StyleSheet.create({
     container: {
         width: '100%',
         marginTop: 20,
-        backgroundColor: 'cyan',
         aspectRatio: 4 / 3,
         borderRadius: 10,
         overflow: 'hidden'
