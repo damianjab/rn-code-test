@@ -15,7 +15,8 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 20,
     width: '100%',
-    color: 'black'
+    color: 'black',
+    marginTop: 50
   }
 })
 
