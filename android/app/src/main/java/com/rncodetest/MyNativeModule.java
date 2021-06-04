@@ -26,10 +26,16 @@ public class MyNativeModule extends ReactContextBaseJavaModule {
 
     @Override
     public Map<String, Object> getConstants() {
-        Log.d("ServiceKey", getReactApplicationContext().getString(R.string.service_key));
+        String service_key= "";
+        if (BuildConfig.DEBUG) {
+            service_key = getReactApplicationContext().getString(R.string.service_key_debug);
+        } else {
+            service_key = getReactApplicationContext().getString(R.string.service_key_release);
+        }
+        Log.d("ServiceKey", service_key);
 
         final Map<String, Object> constants = new HashMap<>();
-        constants.put("SERVICE_KEY", getReactApplicationContext().getString(R.string.service_key));
+        constants.put("SERVICE_KEY", service_key);
         return constants;
     }
 }
